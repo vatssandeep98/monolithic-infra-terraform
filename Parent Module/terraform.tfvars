@@ -84,12 +84,12 @@ pips = {
     rg-location = "central india"
     allocation_method = "Static"
   }
-    pip2 =  {
-    pip-name = "backend-pip"
-    rg-name = "sandeep-rg"
-    rg-location = "central india"
-    allocation_method = "Static"
-  }
+  #   pip2 =  {
+  #   pip-name = "backend-pip"
+  #   rg-name = "sandeep-rg"
+  #   rg-location = "central india"
+  #   allocation_method = "Static"
+  # }
   #   pip3 =  {
   #   pip-name = "jumpvm-pip"
   #   rg-name = "sandeep-rg"
@@ -109,16 +109,16 @@ nics = {
     vnet-name = "frontend-vnet"
       ip_allocation = "Dynamic"
   }
-  vm2 = {
-    nic_name = "backend-nic"
-    rg-location = "central india"
-    rg-name = "sandeep-rg"
-    ip_name = "yogi-ip"
-    subnet-name = "backend-subnet"
-     pip-name = "backend-pip"
-    vnet-name = "backend-vnet"
-      ip_allocation = "Dynamic"
-  }
+  # vm2 = {
+  #   nic_name = "backend-nic"
+  #   rg-location = "central india"
+  #   rg-name = "sandeep-rg"
+  #   ip_name = "yogi-ip"
+  #   subnet-name = "backend-subnet"
+  #    pip-name = "backend-pip"
+  #   vnet-name = "backend-vnet"
+  #     ip_allocation = "Dynamic"
+  # }
   # vm3 = {
   #   nic_name = "jumpvm-nic"
   #   rg-location = "east us"
@@ -150,22 +150,22 @@ vms = {
     nic_name = "frontend-nic"
 
   }
-vm2 = {
-    vm-name = "backend-vm01"
-    rg-name = "sandeep-rg"
-    rg-location = "central india"
-    vm-size = "Standard_D2_v3"
-    admin_username = "yogivm0001"
-    admin_password = "Yogi@2026"
-    caching = "ReadWrite"
-    stg_type = "Standard_LRS"
-    publisher = "Canonical"
-    offer = "UbuntuServer"
-    sku = "16.04-LTS"
-    version = "latest"
-    nic_name = "backend-nic"
+# vm2 = {
+#     vm-name = "backend-vm01"
+#     rg-name = "sandeep-rg"
+#     rg-location = "central india"
+#     vm-size = "Standard_D2_v3"
+#     admin_username = "yogivm0001"
+#     admin_password = "Yogi@2026"
+#     caching = "ReadWrite"
+#     stg_type = "Standard_LRS"
+#     publisher = "Canonical"
+#     offer = "UbuntuServer"
+#     sku = "16.04-LTS"
+#     version = "latest"
+#     nic_name = "backend-nic"
 
-  }
+#   }
 
 # vm3 = {
 #     vm-name = "jump-server"
