@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  name: sandeep-pool
+
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Parent Module'
+    backendServiceArm: 'sharma-svc'
+    backendAzureRmStorageAccountName: 'sandeepstg001'
+    backendAzureRmContainerName: 'sandeep-cont'
+    backendAzureRmKey: 'sandeep.tfstate'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Parent Module'
+    commandOptions: '-auto-approve'
+    environmentServiceNameAzureRM: 'sharma-svc'
