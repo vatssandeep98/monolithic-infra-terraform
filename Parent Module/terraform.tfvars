@@ -79,11 +79,23 @@ subnets = {
 
 pips = {
   pip1 =  {
-    pip-name = "jumpvm-pip"
+    pip-name = "frontend-pip"
     rg-name = "sandeep-rg"
     rg-location = "central india"
     allocation_method = "Static"
   }
+    pip2 =  {
+    pip-name = "backend-pip"
+    rg-name = "sandeep-rg"
+    rg-location = "central india"
+    allocation_method = "Static"
+  }
+  #   pip3 =  {
+  #   pip-name = "jumpvm-pip"
+  #   rg-name = "sandeep-rg"
+  #   rg-location = "central india"
+  #   allocation_method = "Static"
+  # }
 }
 
 nics = {
@@ -93,7 +105,7 @@ nics = {
     rg-name = "sandeep-rg"
     ip_name = "sandeep-ip"
     subnet-name = "frontend-subnet"
-     pip-name = "jumpvm-pip"
+     pip-name = "frontend-pip"
     vnet-name = "frontend-vnet"
       ip_allocation = "Dynamic"
   }
@@ -103,20 +115,20 @@ nics = {
     rg-name = "sandeep-rg"
     ip_name = "yogi-ip"
     subnet-name = "backend-subnet"
-     pip-name = "jumpvm-pip"
+     pip-name = "backend-pip"
     vnet-name = "backend-vnet"
       ip_allocation = "Dynamic"
   }
-  vm3 = {
-    nic_name = "jumpvm-nic"
-    rg-location = "central india"
-    rg-name = "sandeep-rg"
-    ip_name = "yogi-ip"
-    subnet-name = "jumpvm-subnet"
-    vnet-name = "jumpvm-vnet"
-    pip-name = "jumpvm-pip"
-    ip_allocation = "Dynamic"
-  }
+  # vm3 = {
+  #   nic_name = "jumpvm-nic"
+  #   rg-location = "east us"
+  #   rg-name = "sandeep-rg"
+  #   ip_name = "yogi-ip"
+  #   subnet-name = "jumpvm-subnet"
+  #   vnet-name = "jumpvm-vnet"
+  #   pip-name = "jumpvm-pip"
+  #   ip_allocation = "Dynamic"
+  # }
 
 }
 
@@ -155,21 +167,21 @@ vm2 = {
 
   }
 
-vm3 = {
-    vm-name = "jump-server"
-    rg-name = "sandeep-rg"
-    rg-location = "central india"
-    vm-size = "Standard_D2_v3"
-    admin_username = "jumpvm"
-    admin_password = "Yogi@2026"
-    caching = "ReadWrite"
-    stg_type = "Standard_LRS"
-    publisher = "Canonical"
-    offer = "UbuntuServer"
-    sku = "16.04-LTS"
-    version = "latest"
-    nic_name = "jumpvm-nic"
+# vm3 = {
+#     vm-name = "jump-server"
+#     rg-name = "sandeep-rg"
+#     rg-location = "east us"
+#     vm-size = "Standard_D2_v3"
+#     admin_username = "jumpvm"
+#     admin_password = "Yogi@2026"
+#     caching = "ReadWrite"
+#     stg_type = "Standard_LRS"
+#     publisher = "Canonical"
+#     offer = "UbuntuServer"
+#     sku = "16.04-LTS"
+#     version = "latest"
+#     nic_name = "jumpvm-nic"
 
-  }
+#   }
 
 }

@@ -10,7 +10,7 @@ depends_on = [ module.rgs ]
 }
 
 module "subnets" {
-  depends_on = [ module.vnets ]
+  depends_on = [ module.vnets]
   source  = "../Child Module/Subnet"
   subnets = var.subnets
 }
@@ -28,7 +28,7 @@ module "pips" {
  }
 
 module "nsgs" {
-  depends_on = [ module.rgs ]
+  depends_on = [ module.subnets ]
   source = "../Child Module/NSG"
   nsgs = var.nsgs
 }
