@@ -2,8 +2,9 @@ trigger:
 - main
 
 pool:
-  sandeep-pool
+  name: sandeep-pool
 
+steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
@@ -12,7 +13,7 @@ pool:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'sharma-svc'
     backendAzureRmStorageAccountName: 'sandeepstg001'
     backendAzureRmContainerName: 'sandeep-cont'
@@ -22,8 +23,6 @@ pool:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: '-auto-approve'
     environmentServiceNameAzureRM: 'sharma-svc'
-
-  
